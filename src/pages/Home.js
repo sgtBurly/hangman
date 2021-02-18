@@ -11,8 +11,7 @@ const Home = () => {
         <h3>The worlds most famous word game!</h3>
       </section>
       <AlphabetWrapper />
-  </div>
-
+    </div>
   );
 }
 
