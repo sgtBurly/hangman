@@ -1,4 +1,5 @@
-.Home {
-    text-align: center;
+.pageHeader {
+    text-align: left;
     display: flex;
+    flex-flow: column nowrap;
 }
