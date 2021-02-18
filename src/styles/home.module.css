@@ -1,5 +1,19 @@
+.headerWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 3rem;
+}
+
 .pageHeader {
     text-align: left;
     display: flex;
     flex-flow: column nowrap;
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+    background: url("https://svgsilh.com/svg/1295442.svg") no-repeat center;
+    background-size: contain;
 }
