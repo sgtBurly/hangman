@@ -1,5 +1,10 @@
 .main_wrapper {
   width: 100%;
   min-height: 500px;
-  border: solid green 3px;
+  background-color: #F7F9FB;
+  display: flex;
+  justify-content: center;
+}
+.h3 {
+  color: #31708B;
 }
