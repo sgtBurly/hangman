@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-export const HangmanContext = createContext;
+export const HangmanContext = createContext();
 
 export function HangmanProvider (props) {
     const [hangmans, setHangmans] = useState([
