@@ -30,22 +30,33 @@ export function HangmanProvider (props) {
         },
     ])
 
+    const [game, setGame] = useState(false)
+    const [lives, setLives] = useState(null)
+
     //Remember to add hangmans as argumnet when calling on function
     const randomWordFunc = (hangmans) => {
         // Saving random word from array in variable for possible use
         let hangmanWord = hangmans[Math.floor(Math.random() * hangmans.length)];
     }
 
-const values = {
-    hangmans,
-    randomWordFunc
-}
+    const startGame = () => {
+        
+        setGame(true);
+        setLives(10);
+        console.log("you have just started the game!")
+    }
 
-return (
-    <HangmanContext.Provider value={values}>
-        {props.children}
-    </HangmanContext.Provider>
-)
+    const values = {
+        hangmans,
+        randomWordFunc,
+        startGame
+    }
+
+    return (
+        <HangmanContext.Provider value={values}>
+            {props.children}
+        </HangmanContext.Provider>
+    )
 }
 
 export default HangmanProvider;
