@@ -1,4 +1,5 @@
 import React from 'react';
+import AlphabetWrapper from './AlphabetWrapper'
 import {style} from '../styles/home.module.css'
 
 
@@ -10,6 +11,7 @@ const Home = () => {
         <h3>The worlds most famous word game!</h3>
       </section>
   </div>
+      <AlphabetWrapper />
   );
 }
 
