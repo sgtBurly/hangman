@@ -13,8 +13,9 @@ function App() {
           <Home />
         </div>
       </div>
-    </router>
       <Footer />
+    </router>
+
   );
 }
 
