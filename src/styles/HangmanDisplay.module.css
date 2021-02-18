@@ -38,8 +38,26 @@
 }
 .diagonal {
   border-top: 5px solid #000;
-  bottom: 350px;
+  width: 105px;
+  top: 120px;
   left: 150px;
-  top: 50px;
-  right: 50px;
+  position: absolute;
+  transform: skewY(-40deg);
+}
+.rope {
+  border: 5px solid #000;
+  height: 40px;
+  width: 0px;
+  top: 80px;
+  position: absolute;
+  left: 400px;
+}
+.head {
+  position: absolute;
+  border-radius: 100%;
+  height: 80px;
+  width: 80px;
+  top: 130px;
+  left: 360px;
+  border: 5px solid #000;
 }
