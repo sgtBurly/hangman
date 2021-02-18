@@ -7,12 +7,15 @@ import styles from '../styles/home.module.css'
 const Home = () => {
   return (
     <div className="Home">
-      <section className={styles.pageHeader}>
-        <h1>Welcome to Hangman</h1>
-        <h3>The worlds most famous word game!</h3>
-      </section>
-      <AlphabetWrapper />
-      <HangmanDisplay />
+      <div className={styles.headerWrapper}>
+        <section className={styles.pageHeader}>
+          <h1>Welcome to Hangman</h1>
+          <h3>The worlds most famous word game!</h3>
+        </section>
+        <div className={styles.logo}></div>
+      </div>
+        <AlphabetWrapper />
+        <HangmanDisplay />
     </div>
   );
 }
