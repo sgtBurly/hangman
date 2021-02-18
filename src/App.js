@@ -5,10 +5,14 @@ import { BrowserRouter, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <Home />
-    </div>
+    <router>
+      <div className="App">
+        <Navbar />
+        <div className="contain">
+          <Home />
+        </div>
+      </div>
+    </router>
   );
 }
 
