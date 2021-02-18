@@ -32,24 +32,31 @@ export function HangmanProvider (props) {
 
     const [game, setGame] = useState(false)
     const [lives, setLives] = useState(null)
+    const [wordToGuess, setWordToGuess] = useState([])
 
     //Remember to add hangmans as argumnet when calling on function
     const randomWordFunc = (hangmans) => {
         // Saving random word from array in variable for possible use
         let hangmanWord = hangmans[Math.floor(Math.random() * hangmans.length)];
+        return hangmanWord;
     }
 
     const startGame = () => {
-        
+
         setGame(true);
         setLives(10);
         console.log("you have just started the game!")
+        setWordToGuess(randomWordFunc());
+
     }
 
     const values = {
         hangmans,
         randomWordFunc,
-        startGame
+        startGame,
+        wordToGuess,
+        game,
+        lives
     }
 
     return (
