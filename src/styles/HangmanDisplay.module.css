@@ -1,0 +1,8 @@
+.hangmanDisplay {
+  border: 2px dashed #000;
+  width: 600px;
+  height: 600px;
+  margin: 3rem auto;
+  color: #000;
+  text-align: center;
+}

@@ -1,6 +1,8 @@
+import styles from '../styles/HangmanDisplay.module.css'
+
 const HangmanDisplay = () => {
   return (
-    <div className="hangmanDisplay">
+    <div className={styles.hangmanDisplay}>
       <p>Hangman</p>
     </div>
   );

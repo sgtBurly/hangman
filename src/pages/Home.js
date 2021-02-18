@@ -1,4 +1,5 @@
 import React from 'react';
+import HangmanDisplay from '../components/HangmanDisplay'
 
 const Home = () => {
   return (
@@ -10,6 +11,7 @@ const Home = () => {
           <li>Partners</li>
         </ul>
       </nav>
+      <HangmanDisplay />
     </div>
   );
 }
