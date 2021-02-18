@@ -2,6 +2,7 @@ import Home from "./pages/Home";
 import Navbar from "./components/Navbar"
 import { BrowserRouter, Route } from 'react-router-dom';
 import Footer from "./components/footer";
+import HangmanContext from "./context/HangmanContext";
 
 
 function App() {
@@ -9,12 +10,12 @@ function App() {
       <div className="App">
         <BrowserRouter>
             <Navbar />
-            <div className="contain">
-              <Home />
-            </div>
-          <Footer />
+      <HangmanContext>
+        <Home />
+        <Footer />
+      </HangmanContext>
         </BrowserRouter>
-      </div>
+    </div>
   );
 }
 
