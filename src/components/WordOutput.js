@@ -4,15 +4,23 @@ import {useContext} from "react";
 import {HangmanContext} from "../context/HangmanContext";
 
 const WordOutput = () => {
-    return (
-        <div className="WordOutput">
-            <div className="wordWrapper">
-                <div className="letterBox">
-                    
-                </div>
-            </div>
-        </div>
-    );
-}
 
+    const {wordToGuess} = useContext(HangmanContext);
+
+    const lettersArray = wordToGuess.split("");
+
+    return (
+        <div>
+            { wordToGuess && 
+            <div className="WordOutput">
+                <div className="wordWrapper">
+                {lettersArray.map((letter, i) => (                
+                <div className="letterBox" key={i}> {letter}
+                </div>
+                ))}
+                </div>
+            </div>}
+        </div>
+    )
+}
 export default WordOutput;

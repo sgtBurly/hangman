@@ -35,9 +35,9 @@ export function HangmanProvider (props) {
     const [wordToGuess, setWordToGuess] = useState([])
 
     //Remember to add hangmans as argumnet when calling on function
-    const randomWordFunc = (hangmans) => {
+    const randomWordFunc = () => {
         // Saving random word from array in variable for possible use
-        let hangmanWord = hangmans[Math.floor(Math.random() * hangmans.length)];
+        let hangmanWord = hangmans[Math.floor(Math.random() * hangmans.length)].hangman;
         return hangmanWord;
     }
 

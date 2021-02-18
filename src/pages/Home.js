@@ -4,6 +4,7 @@ import AlphabetWrapper from '../components/AlphabetWrapper';
 import LivesWrapper from '../components/LivesWrapper';
 import styles from '../styles/home.module.css';
 import StartGame from '../components/StartGame';
+import WordOutput from '../components/WordOutput';
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
       </div>
         <StartGame />
         <AlphabetWrapper />
+        <WordOutput />
         <HangmanDisplay />
         <LivesWrapper />
     </div>
