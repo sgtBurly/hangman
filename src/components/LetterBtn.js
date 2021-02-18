@@ -1,9 +1,10 @@
 import React from 'react'
+import LetterBtnStyles from '../styles/LetterBtnStyles.module.css';
 
-const LetterBtn = () => {
+const LetterBtn = (props) => {
   return (
-    <button>
-      A letter
+    <button className={LetterBtnStyles.btn}>
+      {props.letter}
     </button>
   );
 }

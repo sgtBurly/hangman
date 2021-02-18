@@ -4,6 +4,8 @@
   background-color: #F7F9FB;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 .h3 {
   color: #31708B;
