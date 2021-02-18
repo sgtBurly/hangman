@@ -61,3 +61,34 @@
   left: 360px;
   border: 5px solid #000;
 }
+.body {
+  position: absolute;
+  height: 150px;
+  border: 3px solid #000;
+  left: 405px;
+  top: 215px;
+
+}
+.arms {
+  position: absolute;
+  width: 120px;
+  border-top: 5px solid #000;
+  top: 270px;
+  left: 350px;
+}
+.legLeft {
+  border-top: 8px solid #000;
+  width: 50px;
+  top: 400px;
+  left: 360px;
+  position: absolute;
+  transform: skewY(-60deg);
+}
+.legRight {
+  border-top: 8px solid #000;
+  width: 50px;
+  top: 405px;
+  left: 410px;
+  position: absolute;
+  transform: skewY(60deg);
+}

@@ -11,6 +11,11 @@ const HangmanDisplay = () => {
         <div className={styles.diagonal}></div>
         <div className={styles.rope}></div>
         <div className={styles.head}></div>
+        <div className={styles.body}></div>
+        <div className={styles.arms}></div>
+        <div className={styles.legLeft}></div>
+        <div className={styles.legRight}></div>
+
       </div>
     </div>
   );
