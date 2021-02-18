@@ -1,9 +1,15 @@
-import React from 'react'
+import React from 'react';
 
 const Home = () => {
   return (
-    <div>
-
+    <div className="Home">
+      <nav className="sidebar">
+        <ul>
+          <li>FAQ</li>
+          <li>Interested in more?</li>
+          <li>Partners</li>
+        </ul>
+      </nav>
     </div>
   );
 }
