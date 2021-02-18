@@ -1,8 +1,13 @@
+import React from "react"
+
 const Navbar = () => {
     return ( 
-        <div>
-            <h1>Home</h1>
-        </div>
+        <nav className="navbar">
+            
+            <h2>Hangman</h2>
+            <p>Home</p>
+            <p>About</p> 
+        </nav>
      );
 }
  
