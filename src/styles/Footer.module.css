@@ -1,7 +1,13 @@
-* {
-    color: red;
+.Footer {
+    position: absolute;
+    bottom: 0px;
+    width: 100vw;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
 
-.Footer {
-    color: blue;
+.Wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 0rem 2rem;
 }
