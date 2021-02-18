@@ -1,18 +1,18 @@
 import React from 'react';
-import AlphabetWrapper from './AlphabetWrapper'
+import AlphabetWrapper from '../components/AlphabetWrapper'
+import {style} from '../styles/home.module.css'
+
 
 const Home = () => {
   return (
     <div className="Home">
-      <nav className="sidebar">
-        <ul>
-          <li>FAQ</li>
-          <li>Interested in more?</li>
-          <li>Partners</li>
-        </ul>
-      </nav>
+      <section className="pageHeader">
+        <h1>Welcome to Hangman</h1>
+        <h3>The worlds most famous word game!</h3>
+      </section>
       <AlphabetWrapper />
-    </div>
+  </div>
+
   );
 }
 
