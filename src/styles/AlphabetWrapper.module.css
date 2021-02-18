@@ -1,0 +1,12 @@
+.main_wrapper {
+  width: 100%;
+  min-height: 500px;
+  background-color: #F7F9FB;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.h3 {
+  color: #31708B;
+}

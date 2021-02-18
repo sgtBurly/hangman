@@ -1,0 +1,5 @@
+.pageHeader {
+    text-align: left;
+    display: flex;
+    flex-flow: column nowrap;
+}
