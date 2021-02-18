@@ -1,0 +1,5 @@
+.main_wrapper {
+  width: 100%;
+  min-height: 500px;
+  border: solid green 3px;
+}
