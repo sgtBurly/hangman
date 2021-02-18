@@ -3,6 +3,7 @@ import HangmanDisplay from '../components/HangmanDisplay';
 import AlphabetWrapper from '../components/AlphabetWrapper';
 import LivesWrapper from '../components/LivesWrapper';
 import styles from '../styles/home.module.css';
+import StartGame from '../components/StartGame';
 
 const Home = () => {
   return (
@@ -12,11 +13,12 @@ const Home = () => {
           <h1>Welcome to Hangman</h1>
           <h3>The worlds most famous word game!</h3>
         </section>
-        <div className={styles.logo}></div>
+      <div className={styles.logo}></div>
       </div>
+        <StartGame />
         <AlphabetWrapper />
         <HangmanDisplay />
-      <LivesWrapper />
+        <LivesWrapper />
     </div>
   );
 }
