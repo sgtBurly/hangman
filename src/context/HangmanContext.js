@@ -30,7 +30,7 @@ export function HangmanProvider (props) {
         },
     ])
 
-    //Remeber to add hangmans as argumnet when calling on function
+    //Remember to add hangmans as argumnet when calling on function
     const randomWordFunc = (hangmans) => {
         // Saving random word from array in variable for possible use
         let hangmanWord = hangmans[Math.floor(Math.random() * hangmans.length)];
@@ -38,13 +38,11 @@ export function HangmanProvider (props) {
 
 const values = {
     hangmans,
-    hangmanWord,
     randomWordFunc
 }
 
 return (
     <HangmanContext.Provider value={values}>
-        {/*Rember adding to app */}
         {props.children}
     </HangmanContext.Provider>
 )

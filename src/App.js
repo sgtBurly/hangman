@@ -1,11 +1,14 @@
 import Home from "./pages/Home";
 import Footer from "./components/footer";
+import HangmanContext from "./context/HangmanContext";
 
 function App() {
   return (
     <div className="App">
-      <Home />
-      <Footer />
+      <HangmanContext>
+        <Home />
+        <Footer />
+      </HangmanContext>
     </div>
   );
 }
