@@ -1,8 +1,8 @@
 import React from 'react';
-import HangmanDisplay from '../components/HangmanDisplay'
-import AlphabetWrapper from '../components/AlphabetWrapper'
-import styles from '../styles/home.module.css'
-
+import HangmanDisplay from '../components/HangmanDisplay';
+import AlphabetWrapper from '../components/AlphabetWrapper';
+import LivesWrapper from '../components/LivesWrapper';
+import styles from '../styles/home.module.css';
 
 const Home = () => {
   return (
@@ -16,6 +16,7 @@ const Home = () => {
       </div>
         <AlphabetWrapper />
         <HangmanDisplay />
+      <LivesWrapper />
     </div>
   );
 }
