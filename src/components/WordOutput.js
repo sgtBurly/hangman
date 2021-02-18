@@ -1,5 +1,7 @@
 import react from "react";
 import {style} from "../styles/WordOutput.module.css"
+import {useContext} from "react";
+import {HangmanContext} from "../context/HangmanContext";
 
 const WordOutput = () => {
     return (
@@ -12,5 +14,5 @@ const WordOutput = () => {
         </div>
     );
 }
- 
+
 export default WordOutput;
