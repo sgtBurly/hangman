@@ -1,6 +1,6 @@
 import React from 'react';
-import AlphabetWrapper from './AlphabetWrapper';
-import styles from '../styles/home.module.css';
+import AlphabetWrapper from '../components/AlphabetWrapper'
+import {style} from '../styles/home.module.css'
 
 
 const Home = () => {
