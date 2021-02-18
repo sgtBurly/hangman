@@ -36,3 +36,10 @@
   bottom: 520px;
   left: 150px;
 }
+.diagonal {
+  border-top: 5px solid #000;
+  bottom: 350px;
+  left: 150px;
+  top: 50px;
+  right: 50px;
+}

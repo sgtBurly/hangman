@@ -8,6 +8,7 @@ const HangmanDisplay = () => {
         <div className={styles.foundation}></div>
         <div className={styles.verticalPole}></div>
         <div className={styles.horizontalPole}></div>
+        <div className={styles.diagonal}></div>
 
       </div>
     </div>
