@@ -48,9 +48,10 @@ export function HangmanProvider (props) {
         setLives(10);
         console.log("you have just started the game!")
         setWordToGuess(randomWordFunc());
+        console.log(wordToGuess)
 
     }
-
+    //const splitGuessed
     const values = {
         hangmans,
         randomWordFunc,
