@@ -25,32 +25,32 @@
 .verticalPole {
   position: absolute;
   height: 400px;
-  border: 5px solid #000;
+  border-right: 10px solid #000;
   bottom: 120px;
-  left: 150px;
+  left: 155px;
 }
 .horizontalPole {
   position: absolute;
   width: 250px;
-  border: 5px solid #000;
+  border-bottom: 10px solid #000;
   bottom: 520px;
-  left: 150px;
+  left: 155px;
 }
 .diagonal {
   border-top: 5px solid #000;
   width: 105px;
-  top: 120px;
-  left: 150px;
+  top: 118px;
+  left: 155px;
   position: absolute;
   transform: skewY(-40deg);
 }
 .rope {
-  border: 3px solid #000;
-  height: 45px;
+  border-right: 4px solid #000;
+  height: 50px;
   width: 0px;
   top: 80px;
   position: absolute;
-  left: 400px;
+  left: 395px;
 }
 .head {
   position: absolute;
@@ -58,14 +58,14 @@
   height: 80px;
   width: 80px;
   top: 130px;
-  left: 360px;
+  left: 350px;
   border: 5px solid #000;
 }
 .body {
   position: absolute;
   height: 150px;
-  border: 3px solid #000;
-  left: 405px;
+  border-left: 5px solid #000;
+  left: 395px;
   top: 215px;
 
 }
@@ -74,21 +74,21 @@
   width: 120px;
   border-top: 5px solid #000;
   top: 270px;
-  left: 350px;
+  left: 340px;
 }
 .legLeft {
   border-top: 8px solid #000;
   width: 50px;
   top: 400px;
-  left: 360px;
+  left: 348px;
   position: absolute;
   transform: skewY(-60deg);
 }
 .legRight {
   border-top: 8px solid #000;
   width: 50px;
-  top: 405px;
-  left: 410px;
+  top: 400px;
+  left: 398px;
   position: absolute;
   transform: skewY(60deg);
 }
