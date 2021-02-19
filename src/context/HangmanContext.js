@@ -52,7 +52,7 @@ export function HangmanProvider (props) {
         console.log(wordToGuess)
     }
     const testFunction = () => {
-        const splitGuessedWord = wordToGuess.split("");
+        setSplitGuessedWord(wordToGuess.split(""));
         console.log(splitGuessedWord);
     }
 

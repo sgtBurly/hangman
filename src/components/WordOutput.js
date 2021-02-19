@@ -4,14 +4,16 @@ import  { useContext } from "react";
 import { HangmanContext } from "../context/HangmanContext";
 
 const WordOutput = () => {
-const { wordToGuess} = useContext(HangmanContext);
+const { splitGuessedWord } = useContext(HangmanContext);
 
     return (
         <div className={style.WordOutput}>
             <div className={style.wordWrapper}>
-                <div className={style.LetterBox}>
-                    <p className={style.Letter}>{wordToGuess}</p>
+                {splitGuessedWord && splitGuessedWord.map((letter, i) => (
+                    <div className={style.LetterBox} key={i}>
+                    <p className={style.Letter}>{letter}</p>
                 </div>
+                ))}
             </div>
         </div>
     );

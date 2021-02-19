@@ -8,13 +8,13 @@ const LetterBtn = (props) => {
 
   useEffect(() => {
     if (splitGuessedWord > 0) {
-      newTestFunction();
+      //newTestFunction();
     }
 }, [splitGuessedWord]);
 
 
   return (
-    <button /* onClick={() => console.log("This is the letter value " + props.letter)} */className={LetterBtnStyles.btn} onClick={newTestFunction}>
+    <button /* onClick={() => console.log("This is the letter value " + props.letter)} */className={LetterBtnStyles.btn}>
       {props.letter}
     </button>
   );
