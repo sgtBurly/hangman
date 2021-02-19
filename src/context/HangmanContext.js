@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useState, useEffect } from "react";
 export const HangmanContext = createContext();
 
 
@@ -33,7 +33,8 @@ export function HangmanProvider (props) {
 
     const [game, setGame] = useState(false)
     const [lives, setLives] = useState(null)
-    const [wordToGuess, setWordToGuess] = useState([])
+    const [wordToGuess, setWordToGuess] = useState();
+    const [splitGuessedWord, setSplitGuessedWord] = useState();
 
     //Remember to add hangmans as argumnet when calling on function
     const randomWordFunc = () => {
@@ -49,16 +50,39 @@ export function HangmanProvider (props) {
         console.log("you have just started the game!")
         setWordToGuess(randomWordFunc());
         console.log(wordToGuess)
-
     }
-    //const splitGuessed
+    const testFunction = () => {
+        const splitGuessedWord = wordToGuess.split("");
+        console.log(splitGuessedWord);
+    }
+
+    useEffect(() => {
+        if (wordToGuess) {
+            testFunction();
+        }
+    }, [wordToGuess]);
+
+    const checkLetterMatch = () => {
+        splitGuessedWord.forEach(letter => {
+          if (letter === props.letter) {
+            console.log("MATCH")
+            console.log(props.letter)
+          }
+          else {
+            console.log("No match")
+            console.log(props.letter)
+            console.log(letter)
+          }
+        })
+      }
     const values = {
         hangmans,
         randomWordFunc,
         startGame,
         wordToGuess,
         game,
-        lives
+        lives,
+        splitGuessedWord
     }
 
     return (
