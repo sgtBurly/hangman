@@ -2,3 +2,17 @@
     display: flex;
     justify-content: center;
 }
+
+.LetterBox {
+    text-decoration: underline;
+    text-decoration-color: gray;
+    background-color: #dfdfdf;
+    margin-left: 1px;
+    margin-right: 1px;
+    border-radius: 5px;
+
+}
+
+.Letter {
+    padding: 2px;
+}
