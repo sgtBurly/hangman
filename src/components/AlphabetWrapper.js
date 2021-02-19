@@ -9,9 +9,9 @@ const AlphabetWrapper = () => {
       <h3 className={AlphaStyles.h3}>Guess a letter</h3>
       <div>
         {
-          letters.map(letter => {
+          letters.map((letter, i) => {
             return (
-              <LetterBtn letter={letter} />
+              <LetterBtn key={i} letter={letter} />
             )
           })
         }
