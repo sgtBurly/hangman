@@ -1,21 +1,26 @@
 import styles from '../styles/HangmanDisplay.module.css'
 import { HangmanContext } from '../context/HangmanContext'
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 
 const HangmanDisplay = () => {
+
+  const { lives } = useContext(HangmanContext);
+  // Uses 'dummy' variable instead, will use lives later
+  const [numberOfGuessesLeft, setNumberOfGuessesLeft] = useState(10);
+
   return (
     <div className={styles.hangmanDisplay}>
-      <div className={`${styles.hangmanContainer}`}>
-        <div className={styles.foundation}></div>
-        <div className={styles.verticalPole}></div>
-        <div className={styles.horizontalPole}></div>
-        <div className={styles.diagonal}></div>
-        <div className={styles.rope}></div>
-        <div className={styles.head}></div>
-        <div className={styles.body}></div>
-        <div className={styles.arms}></div>
-        <div className={styles.legLeft}></div>
-        <div className={styles.legRight}></div>
+      <div className={styles.hangmanContainer}>
+        <div className={`${styles.foundation} ${styles.hidden}`}></div>
+        <div className={`${styles.verticalPole} ${styles.hidden}`}></div>
+        <div className={`${styles.horizontalPole} ${styles.hidden}`}></div>
+        <div className={`${styles.diagonal} ${styles.hidden}`}></div>
+        <div className={`${styles.rope} ${styles.hidden}`}></div>
+        <div className={`${styles.head} ${styles.hidden}`}></div>
+        <div className={`${styles.body} ${styles.hidden}`}></div>
+        <div className={`${styles.arms} ${styles.hidden}`}></div>
+        <div className={`${styles.legLeft} ${styles.hidden}`}></div>
+        <div className={`${styles.legRight} ${styles.hidden}`}></div>
       </div>
     </div>
   );

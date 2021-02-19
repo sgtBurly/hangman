@@ -92,3 +92,6 @@
   position: absolute;
   transform: skewY(60deg);
 }
+.hidden {
+  display: none;
+}
