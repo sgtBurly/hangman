@@ -7,9 +7,9 @@ const WordOutput = () => {
 const { wordToGuess} = useContext(HangmanContext);
 
     return (
-        <div className="WordOutput">
-            <div className="wordWrapper">
-                <div className="letterBox">
+        <div className={style.WordOutput}>
+            <div className={style.wordWrapper}>
+                <div className={style.letterBox}>
                     <p>{wordToGuess}</p>
                 </div>
             </div>
