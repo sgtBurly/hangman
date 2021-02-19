@@ -32,7 +32,8 @@ export function HangmanProvider (props) {
 
     const [game, setGame] = useState(false)
     const [lives, setLives] = useState(null)
-    const [wordToGuess, setWordToGuess] = useState()
+    const [wordToGuess, setWordToGuess] = useState();
+    const [splitGuessedWord, setSplitGuessedWord] = useState();
 
     //Remember to add hangmans as argumnet when calling on function
     const randomWordFunc = () => {
@@ -60,13 +61,27 @@ export function HangmanProvider (props) {
         }
     }, [wordToGuess]);
 
+    const checkLetterMatch = () => {
+        splitGuessedWord.forEach(letter => {
+          if (letter === props.letter) {
+            console.log("MATCH")
+            console.log(props.letter)
+          }
+          else {
+            console.log("No match")
+            console.log(props.letter)
+            console.log(letter)
+          }
+        })
+      }
     const values = {
         hangmans,
         randomWordFunc,
         startGame,
         wordToGuess,
         game,
-        lives
+        lives,
+        splitGuessedWord
     }
 
     return (
