@@ -6,7 +6,7 @@ const HangmanDisplay = () => {
 
   const { lives } = useContext(HangmanContext);
   // Uses 'dummy' variable instead, will use lives from Context later
-  const [numberOfGuessesLeft, setNumberOfGuessesLeft] = useState(3);
+  //const [numberOfGuessesLeft, setNumberOfGuessesLeft] = useState(0);
 
   return (
     <div className={styles.hangmanDisplay}>
