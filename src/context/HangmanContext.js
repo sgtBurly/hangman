@@ -1,6 +1,7 @@
 import { createContext, useState, useEffect } from "react";
 export const HangmanContext = createContext();
 
+
 export function HangmanProvider (props) {
     const [hangmans, setHangmans] = useState([
         {
@@ -74,6 +75,13 @@ export function HangmanProvider (props) {
           }
         })
       }
+
+      const getLetter = (letter) => {
+        /*const clickedLetter = letter;*/
+        console.log(letter);
+        /*return props.letter*/
+      }
+
     const values = {
         hangmans,
         randomWordFunc,
@@ -81,7 +89,9 @@ export function HangmanProvider (props) {
         wordToGuess,
         game,
         lives,
-        splitGuessedWord
+        splitGuessedWord,
+        checkLetterMatch,
+        getLetter
     }
 
     return (
