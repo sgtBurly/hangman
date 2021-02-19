@@ -1,4 +1,6 @@
 import styles from '../styles/HangmanDisplay.module.css'
+import { HangmanContext } from '../context/HangmanContext'
+import { useContext } from 'react'
 
 const HangmanDisplay = () => {
   return (
