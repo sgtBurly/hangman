@@ -50,7 +50,7 @@ export function HangmanProvider (props) {
         console.log(wordToGuess)
 
     }
-    const splitGuessed
+    //const splitGuessed
     const values = {
         hangmans,
         randomWordFunc,
