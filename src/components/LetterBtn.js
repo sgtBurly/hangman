@@ -5,16 +5,14 @@ import { HangmanContext } from '../context/HangmanContext';
 
 const LetterBtn = (props) => {
 
+  const [hideButton, setHideButton] = useState(true);
+
+
+
   const { splitGuessedWord, getLetter } = useContext(HangmanContext);
 
-//   useEffect(() => {
-//     if (splitGuessedWord > 0) {
-//       newTestFunction();
-//     }
-// }, [splitGuessedWord]);
-
-
   return (
+    
     <button className={LetterBtnStyles.btn} onClick={() => getLetter(props.letter)}>
       {props.letter}
     </button>

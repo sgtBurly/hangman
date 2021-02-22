@@ -62,24 +62,33 @@ export function HangmanProvider (props) {
         }
     }, [wordToGuess]);
 
-    const checkLetterMatch = () => {
-        splitGuessedWord.forEach(letter => {
-          if (letter === props.letter) {
-            console.log("MATCH")
-            console.log(props.letter)
-          }
-          else {
-            console.log("No match")
-            console.log(props.letter)
-            console.log(letter)
-          }
-        })
-      }
 
       const getLetter = (letter) => {
-        const clickedLetter = letter;
+
+        setHideButton(false);
+
+        /*loop through word and check if clicked letter matches letter in word*/
+        splitGuessedWord.forEach(letterInWord => {
+            if (letterInWord === letter) {
+                correctLetters.push(letter);
+              console.log("MATCH")
+              console.log("this is letterInWord " + letterInWord)
+            }
+            else {
+                wrongLetters.push(letter);
+
+                /*subtract 1 life setLives(--);
+*/
+                console.log("No match")
+                console.log("this is letterInWord " + letterInWord)
+            }
+          })
         console.log(letter);
+        console.log("this is props letter " + letter)
       }
+
+      let correctLetters = [];
+      let wrongLetters = [];
 
     const values = {
         hangmans,
@@ -89,7 +98,6 @@ export function HangmanProvider (props) {
         game,
         lives,
         splitGuessedWord,
-        checkLetterMatch,
         getLetter
     }
 
