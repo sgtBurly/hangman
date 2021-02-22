@@ -1,23 +1,30 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import LetterBtnStyles from '../styles/LetterBtnStyles.module.css';
 import { HangmanContext } from '../context/HangmanContext';
 
+
 const LetterBtn = (props) => {
-  const { splitGuessedWord } = useContext(HangmanContext);
 
+  const [hideButton, setHideButton] = useState(true);
+  const { getLetter } = useContext(HangmanContext);
 
-  useEffect(() => {
-    if (splitGuessedWord > 0) {
-      //newTestFunction();
-    }
-}, [splitGuessedWord]);
-
-
+  const hideButtonFunction = () => {
+    setHideButton(false);
+  }
+  //setHideButton(false);
+  console.log("This is the initial state of hidebutton " + hideButton)
   return (
-    <button /* onClick={() => console.log("This is the letter value " + props.letter)} */className={LetterBtnStyles.btn}>
+    <div className={LetterBtnStyles.main_wrapper}>
+    {
+      hideButton ? <button className={LetterBtnStyles.btn} onClick={() => {getLetter(props.letter); hideButtonFunction()}} >
       {props.letter}
-    </button>
+      </button> : null
+    }
+    </div>
+
   );
 }
 
 export default LetterBtn;
+
+/* newTestFunction onClick={() => console.log("This is the letter value " + props.letter)} */
