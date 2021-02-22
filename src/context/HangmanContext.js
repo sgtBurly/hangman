@@ -6,27 +6,27 @@ export function HangmanProvider (props) {
     const [hangmans, setHangmans] = useState([
         {
             // adding boolean for possible logic use in game
-            hangman: "RandomWord1",
+            hangman: "cat",
             boolean: false
         },
         {
-            hangman: "RandomWord2",
+            hangman: "kanelbulle",
             boolean: false
         },
         {
-            hangman: "RandomWord3",
+            hangman: "datortekniker",
             boolean: false
         },
         {
-            hangman: "RandomWord4",
+            hangman: "medieinstitutet",
             boolean: false
         },
         {
-            hangman: "RandomWord5",
+            hangman: "react",
             boolean: false
         },
         {
-            hangman: "RandomWord6",
+            hangman: "vue",
             boolean: false
         },
     ])
@@ -101,7 +101,7 @@ export function HangmanProvider (props) {
         useEffect(()=> {
             if (lives < 1) {
               alert("You got hanged! Lmao");
-              let hangedMusic = new Audio("https://ia800600.us.archive.org/22/items/vasiljevs_10_201709/01.mp3");
+              let hangedMusic = new Audio("https://ia802905.us.archive.org/35/items/cd_golden-anniversary-celebration_the-four-freshmen/disc1/17.%20The%20Four%20Freshmen%20-%20Tom%20Dooley%20%281962%29_sample.mp3");
               hangedMusic.play();
             }
         }, [lives])
