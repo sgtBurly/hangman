@@ -7,7 +7,7 @@ const AlphabetWrapper = () => {
   return (
     <div className={AlphaStyles.main_wrapper}>
       <h3 className={AlphaStyles.h3}>Guess a letter</h3>
-      <div>
+      <div className={AlphaStyles.button_wrapper}>
         {
           letters.map((letter, i) => {
             return (
