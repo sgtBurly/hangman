@@ -65,7 +65,7 @@ export function HangmanProvider (props) {
 
       const getLetter = (letter) => {
 
-        setHideButton(false);
+
 
         /*loop through word and check if clicked letter matches letter in word*/
         splitGuessedWord.forEach(letterInWord => {
@@ -98,7 +98,7 @@ export function HangmanProvider (props) {
         game,
         lives,
         splitGuessedWord,
-        getLetter
+        getLetter,
     }
 
     return (

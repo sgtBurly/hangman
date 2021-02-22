@@ -6,16 +6,22 @@ import { HangmanContext } from '../context/HangmanContext';
 const LetterBtn = (props) => {
 
   const [hideButton, setHideButton] = useState(true);
+  const { getLetter } = useContext(HangmanContext);
 
-
-
-  const { splitGuessedWord, getLetter } = useContext(HangmanContext);
-
+  const hideButtonFunction = () => {
+    setHideButton(false);
+  }
+  //setHideButton(false);
+  console.log("This is the initial state of hidebutton " + hideButton)
   return (
-    
-    <button className={LetterBtnStyles.btn} onClick={() => getLetter(props.letter)}>
+    <div>
+    {
+      hideButton ? <button className={LetterBtnStyles.btn} onClick={() => {getLetter(props.letter); hideButtonFunction()}} >
       {props.letter}
-    </button>
+      </button> : null
+    }
+    </div>
+
   );
 }
 
