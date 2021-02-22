@@ -51,14 +51,14 @@ export function HangmanProvider (props) {
         setWordToGuess(randomWordFunc());
         console.log(wordToGuess)
     }
-    const testFunction = () => {
+    const splitFunction = () => {
         setSplitGuessedWord(wordToGuess.split(""));
         console.log(splitGuessedWord);
     }
 
     useEffect(() => {
         if (wordToGuess) {
-            testFunction();
+            splitFunction();
         }
     }, [wordToGuess]);
 
@@ -77,9 +77,8 @@ export function HangmanProvider (props) {
       }
 
       const getLetter = (letter) => {
-        /*const clickedLetter = letter;*/
+        const clickedLetter = letter;
         console.log(letter);
-        /*return props.letter*/
       }
 
     const values = {
