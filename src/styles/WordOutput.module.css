@@ -3,21 +3,34 @@
     flex-wrap: wrap;
     justify-content: center;
 }
-
+.wordWrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
 .LetterBox {
     /* text-decoration: underline; */
     /* text-decoration-color: gray; */
     background-color: #dfdfdf;
-    margin: 0.2rem;
+    margin: 0 0.2rem;
+    padding: 0;
     border-radius: 5px;
     display: inline-block;
     width: 50px;
+    height: 50px;
 }
 
 .Letter {
-    padding: 2px;
+    margin: 0;
+    /* padding: 0;  */
+    /* padding: 2px; */
     text-align: center;
-    visibility: hidden;
+    font-size: 1.2rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    /* visibility: hidden; */
 }
 
 
