@@ -36,7 +36,7 @@ export function HangmanProvider (props) {
     const [lives, setLives] = useState(10)
     const [wordToGuess, setWordToGuess] = useState();
     const [splitGuessedWord, setSplitGuessedWord] = useState();
-    const [correctLetters, setCorrectLetters] = useState([]);
+    const [correctLetter, setCorrectLetter] = useState("");
     const [wrongLetters, setWrongLetters] = useState([]);
     //Remember to add hangmans as argumnet when calling on function
     const randomWordFunc = () => {
@@ -62,13 +62,15 @@ export function HangmanProvider (props) {
             splitFunction();
         }
     }, [wordToGuess]);
+
       const getLetter = (letter) => {
         /*loop through word and check if clicked letter matches letter in word*/
         splitGuessedWord.forEach(letterInWord => {
             //If user guesses right this happens
             if (letterInWord === letter) {
-              correctLetters.push(letter);
+              setCorrectLetter(letter);
               console.log("MATCH")
+              console.log("This is the correctLetter" + correctLetter)
               console.log("this is letterInWord " + letterInWord)
             }
             //If user guesses wrong this happens
@@ -77,11 +79,13 @@ export function HangmanProvider (props) {
                 /*subtract 1 life setLives(--);*/
                 console.log("No match")
                 console.log("this is letterInWord " + letterInWord)
-                if (lives < 1) {
-                    alert("You got hanged! Lmao");
-                }
             }
           })
+          if (lives < 1) {
+            alert("You got hanged! Lmao");
+            let hangedMusic = new Audio("https://ia800600.us.archive.org/22/items/vasiljevs_10_201709/01.mp3");
+            hangedMusic.play();
+          }
         /*
         console.log(letter);
         console.log("this is props letter " + letter)
