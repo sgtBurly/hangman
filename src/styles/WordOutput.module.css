@@ -1,18 +1,27 @@
 .WordOutput {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
 .LetterBox {
-    text-decoration: underline;
-    text-decoration-color: gray;
+    /* text-decoration: underline; */
+    /* text-decoration-color: gray; */
     background-color: #dfdfdf;
-    margin-left: 1px;
-    margin-right: 1px;
+    margin: 0.2rem;
     border-radius: 5px;
-
+    display: inline-block;
+    width: 50px;
 }
 
 .Letter {
     padding: 2px;
+    text-align: center;
+    visibility: hidden;
 }
+
+
+/* For future toggling purposes */
+/* .ShowLetter {
+    visibility: visible;
+} */
