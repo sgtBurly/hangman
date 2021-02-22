@@ -108,6 +108,7 @@ export function HangmanProvider (props) {
         lives,
         splitGuessedWord,
         getLetter,
+        correctLetter
     }
 
     return (
