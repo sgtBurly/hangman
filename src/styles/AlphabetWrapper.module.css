@@ -7,8 +7,15 @@
   flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
+  border: solid red 2px;
 }
 .h3 {
   color: #31708B;
   font-size: 3rem;
+}
+.button_wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

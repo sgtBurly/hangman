@@ -44,18 +44,19 @@ export function HangmanProvider (props) {
         let hangmanWord = hangmans[Math.floor(Math.random() * hangmans.length)].hangman;
         return hangmanWord;
     }
-
+    //The function that starts the game
     const startGame = () => {
         setGame(true);
         console.log("you have just started the game!")
         setWordToGuess(randomWordFunc());
         console.log(wordToGuess)
     }
+    //Splits the random-word into seperate letters
     const splitFunction = () => {
         setSplitGuessedWord(wordToGuess.split(""));
         console.log(splitGuessedWord);
     }
-
+    //Runs the split-function when a word is generated
     useEffect(() => {
         if (wordToGuess) {
             splitFunction();
@@ -77,16 +78,17 @@ export function HangmanProvider (props) {
                 console.log("No match")
                 console.log("this is letterInWord " + letterInWord)
                 if (lives < 1) {
-                    alert("You got hanged!");
+                    alert("You got hanged! Lmao");
                 }
             }
           })
-
+        /*
         console.log(letter);
         console.log("this is props letter " + letter)
         console.log("This is correct letters array " + correctLetters)
+        */
       }
-
+        //Decrements 1 life every time the user guesses a wrong letter(based on the wrongLetters array)
         useEffect(() => {
         setLives(prevLives => prevLives - 1);
         console.log("This is lives " + lives)
