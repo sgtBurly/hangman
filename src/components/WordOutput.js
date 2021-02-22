@@ -6,9 +6,10 @@ import { HangmanContext } from "../context/HangmanContext";
 const WordOutput = () => {
     const { splitGuessedWord } = useContext(HangmanContext);
 
-    // Later... variable from Context
-    //const { correctLetter } = useContext(HangmanContext);
-    const correctLetter = 'o';
+    // Variable from Context
+    
+    const { correctLetter } = useContext(HangmanContext);
+    //const correctLetter = 'o';
     console.log(splitGuessedWord);
     const [outputArray, setOutputArray] = useState([]);
 
