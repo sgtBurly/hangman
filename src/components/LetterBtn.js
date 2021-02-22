@@ -14,7 +14,7 @@ const LetterBtn = (props) => {
   //setHideButton(false);
   console.log("This is the initial state of hidebutton " + hideButton)
   return (
-    <div>
+    <div className={LetterBtnStyles.main_wrapper}>
     {
       hideButton ? <button className={LetterBtnStyles.btn} onClick={() => {getLetter(props.letter); hideButtonFunction()}} >
       {props.letter}

@@ -31,11 +31,13 @@ export function HangmanProvider (props) {
         },
     ])
 
+
     const [game, setGame] = useState(false)
-    const [lives, setLives] = useState(null)
+    const [lives, setLives] = useState(10)
     const [wordToGuess, setWordToGuess] = useState();
     const [splitGuessedWord, setSplitGuessedWord] = useState();
-
+    const [correctLetters, setCorrectLetters] = useState([]);
+    const [wrongLetters, setWrongLetters] = useState([]);
     //Remember to add hangmans as argumnet when calling on function
     const randomWordFunc = () => {
         // Saving random word from array in variable for possible use
@@ -44,9 +46,7 @@ export function HangmanProvider (props) {
     }
 
     const startGame = () => {
-
         setGame(true);
-        setLives(10);
         console.log("you have just started the game!")
         setWordToGuess(randomWordFunc());
         console.log(wordToGuess)
@@ -61,34 +61,37 @@ export function HangmanProvider (props) {
             splitFunction();
         }
     }, [wordToGuess]);
-
-
       const getLetter = (letter) => {
-
-
-
         /*loop through word and check if clicked letter matches letter in word*/
         splitGuessedWord.forEach(letterInWord => {
+            //If user guesses right this happens
             if (letterInWord === letter) {
-                correctLetters.push(letter);
+              correctLetters.push(letter);
               console.log("MATCH")
               console.log("this is letterInWord " + letterInWord)
             }
+            //If user guesses wrong this happens
             else {
-                wrongLetters.push(letter);
-
-                /*subtract 1 life setLives(--);
-*/
+                setWrongLetters(...letter)
+                /*subtract 1 life setLives(--);*/
                 console.log("No match")
                 console.log("this is letterInWord " + letterInWord)
+                if (lives < 1) {
+                    alert("You got hanged!");
+                }
             }
           })
+
         console.log(letter);
         console.log("this is props letter " + letter)
+        console.log("This is correct letters array " + correctLetters)
       }
 
-      let correctLetters = [];
-      let wrongLetters = [];
+        useEffect(() => {
+        setLives(prevLives => prevLives - 1);
+        console.log("This is lives " + lives)
+    }, [wrongLetters]);
+
 
     const values = {
         hangmans,
