@@ -65,7 +65,18 @@ export function HangmanProvider (props) {
 
       const getLetter = (letter) => {
         /*loop through word and check if clicked letter matches letter in word*/
-        splitGuessedWord.forEach(letterInWord => {
+        console.log('In getLetter', splitGuessedWord);
+        const guess = splitGuessedWord.includes(letter);
+
+        if(guess) {
+            setCorrectLetter(letter);
+              console.log("MATCH")
+        } else {
+            setLives(prevState => prevState-1)
+            console.log('No match')
+        }
+
+        /* splitGuessedWord.forEach(letterInWord => {
             //If user guesses right this happens
             if (letterInWord === letter) {
               setCorrectLetter(letter);
@@ -77,26 +88,28 @@ export function HangmanProvider (props) {
             else {
                 setWrongLetters(...letter)
                 /*subtract 1 life setLives(--);*/
-                console.log("No match")
-                console.log("this is letterInWord " + letterInWord)
+                //console.log("No match")
+                //console.log("this is letterInWord " + letterInWord)
+            //}
+          //})
+          /*
+          console.log(letter);
+          console.log("this is props letter " + letter)
+          console.log("This is correct letters array " + correctLetters)
+          */
+        }
+        useEffect(()=> {
+            if (lives < 1) {
+              alert("You got hanged! Lmao");
+              let hangedMusic = new Audio("https://ia800600.us.archive.org/22/items/vasiljevs_10_201709/01.mp3");
+              hangedMusic.play();
             }
-          })
-          if (lives < 1) {
-            alert("You got hanged! Lmao");
-            let hangedMusic = new Audio("https://ia800600.us.archive.org/22/items/vasiljevs_10_201709/01.mp3");
-            hangedMusic.play();
-          }
-        /*
-        console.log(letter);
-        console.log("this is props letter " + letter)
-        console.log("This is correct letters array " + correctLetters)
-        */
-      }
+        }, [lives])
         //Decrements 1 life every time the user guesses a wrong letter(based on the wrongLetters array)
-        useEffect(() => {
-        setLives(prevLives => prevLives - 1);
-        console.log("This is lives " + lives)
-    }, [wrongLetters]);
+    //     useEffect(() => {
+    //     setLives(prevLives => prevLives - 1);
+    //     console.log("This is lives " + lives)
+    // }, [wrongLetters]);
 
 
     const values = {
