@@ -7,11 +7,10 @@ const WordOutput = () => {
     const { splitGuessedWord } = useContext(HangmanContext);
 
     // Later... variable from Context
-    //const { correctLetters } = useContext(HangmanContext);
+    //const { correctLetter } = useContext(HangmanContext);
     const correctLetter = 'o';
     console.log(splitGuessedWord);
     const [outputArray, setOutputArray] = useState([]);
-    console.log(outputArray);
 
     useEffect(()=>{
         if(splitGuessedWord){
@@ -21,10 +20,6 @@ const WordOutput = () => {
             });
             setOutputArray(tempArray)
             console.log(outputArray);
-
-
-            //const index = splitGuessedWord.indexOf(guessedLetter);
-            //emptyArray[index] = guessedLetter;
         }
     }, [splitGuessedWord]);
 
@@ -32,25 +27,17 @@ const WordOutput = () => {
 
          //User guesses a right letter. Will be variable from Context and updated with useEffect
          if(outputArray && splitGuessedWord) {
+            let tempArray = [...outputArray];
             splitGuessedWord.forEach((letter, i) => {
-            if (letter === correctLetter){
-                setOutputArray([...outputArray.slice(0,i), letter, ...outputArray.slice(i+1,outputArray.length-1)])
-                //setOutputArray([...outputArray.splice(i, 0, letter)])
-                //outputArray[i] = letter
-            }
-        })}
-    }, [correctLetter])
+                if (letter === correctLetter){
+                    tempArray = [...tempArray.slice(0,i), letter, ...tempArray.slice(i+1,tempArray.length)];
+                    //console.log('tempArray', tempArray);
 
-
-    // useEffect(() => {
-    //     if(correctLetters){
-    //         splitGuessedWord.forEach((letter, i) => {
-    //             if (letter === correctLetters[correctLetters.length-1]){
-    //                 outputArray[i] = letter
-    //             }
-    //         })
-    //     }
-    // }, [correctLetters]);
+                }
+            })
+            setOutputArray(tempArray)
+        }
+    }, [correctLetter]);
 
 
     return (
